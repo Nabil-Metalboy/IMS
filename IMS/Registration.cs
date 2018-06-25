@@ -14,6 +14,7 @@ namespace IMS
         public Registration()
         {
             InitializeComponent();
+            button2.Visible = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -23,9 +24,17 @@ namespace IMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-               
+           
+                    button2.Visible = true;
+                    this.button1.Hide();
          }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
+
+        
+ 
