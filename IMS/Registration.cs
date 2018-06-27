@@ -26,47 +26,65 @@ namespace IMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //DataTable check = new DataTable();
-            //check = insertQr.queryexecution("select * from USERINFO");
-            //foreach(DataRow user in check.Rows)
-            //{
-            //    if (textBox1.Text == user["FirstName"].ToString()
-            //        ||
-            //        textBox2.Text == user["LastName"].ToString()
-            //         ||
-            //        textBox3.Text == user["UserName"].ToString()
-            //         ||
-            //        textBox4.Text == user["MobileNo"].ToString()
-            //         ||
-            //        textBox5.Text == user["Email"].ToString()
-            //         ||
-            //        textBox6.Text == user["Password"].ToString()
+            DataTable check = new DataTable();
+            check = insertQr.queryexecution("select * from USERINFO");
+            foreach (DataRow user in check.Rows)
+            {
+                if (FNtextBox.Text == user["FirstName"].ToString()
+                    ||
+                    LNtextBox.Text == user["LastName"].ToString()
+                     ||
+                    UNtextBox.Text == user["UserName"].ToString()
+                     ||
+                    MobNotextBox.Text == user["MobileNo"].ToString()
+                     ||
+                    EmailtextBox.Text == user["Email"].ToString()
+                    )
+                {
+                    MessageBox.Show("User Already Exists");
+                    Start st = new Start(true);
+                    st.Show();
+                    this.Hide();
+                }
 
-            //        ) 
-            //    {
-            //        MessageBox.Show("User Already Exists");
-            //        Start st = new Start();
-            //        st.Show();
-            //        this.Hide();
-            //    }
 
-            //    else
-            //    {
-            //        MessageBox.Show("Data Verified");
-            //        button2.Visible = true;
-            //        this.button1.Hide();
-            //    }
-            //}
-            button2.Visible = true;
-            this.button1.Hide();
+                else 
+                //if (FNtextBox.Text != user["FirstName"].ToString()
+                //    ||
+                //    LNtextBox.Text != user["LastName"].ToString()
+                //     ||
+                //    UNtextBox.Text != user["UserName"].ToString()
+                //     ||
+                //    MobNotextBox.Text != user["MobileNo"].ToString()
+                //     ||
+                //    EmailtextBox.Text != user["Email"].ToString())
+                {
+                    
+                    button2.Visible = true;
+                    this.button1.Hide();
+                    
+                }
+                
+            }
+            MessageBox.Show("Data Verified");
+            //button2.Visible = true;
+            //this.button1.Hide();
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             DataTable user = new DataTable();
+            //Maal Dhukaite hobe avabe
             user = insertQr.queryexecution("Insert into USERINFO (FirstName,LastName,UserName,MobileNo,Email,Password) values ('" + FNtextBox.Text +"','" + LNtextBox.Text + "','" + UNtextBox.Text + "','" + MobNotextBox.Text + "','"+EmailtextBox.Text+ "','" + PasstextBox.Text + "')");
             MessageBox.Show("User Registered Successfully");
+            FNtextBox.Clear();
+            LNtextBox.Clear();
+            UNtextBox.Clear();
+            MobNotextBox.Clear();
+            FNtextBox.Clear();
+            EmailtextBox.Clear();
+            PasstextBox.Clear();
         }
     }
 }

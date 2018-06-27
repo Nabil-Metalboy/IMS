@@ -18,6 +18,17 @@ namespace IMS
             label2.Hide();
             label3.Hide();
             label4.Hide();
+            label8.Hide();
+        }
+
+        public Start(bool visibility)
+        {
+            InitializeComponent();
+            label1.Hide();
+            label2.Hide();
+            label3.Hide();
+            label4.Hide();
+            label8.Visible = visibility;
         }
 
         
