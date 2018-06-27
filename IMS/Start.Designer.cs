@@ -174,6 +174,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Start";
             this.Text = "Start";
+           
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

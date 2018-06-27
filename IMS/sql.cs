@@ -1,45 +1,40 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.SqlClient;
+
 
 namespace IMS
 {
     class sql
     {
-        public SqlDataAdapter SqlDtAdptr;
-        public DataTable DtTbl;
-        public string condb;
-        //, string database, string source
-
-        public DataTable get_rs(string STRSQL)
+        public DataTable queryexecution(string query)
         {
+            string strstring = "Data Source=.;Database=IMS;Integrated Security=True";
+            SqlConnection sqcon = new SqlConnection(strstring);
+            sqcon.Open();
+            SqlCommand sqccmd = new SqlCommand();
+            sqccmd.CommandText = query;
+            sqccmd.CommandTimeout = 600;
+            sqccmd.Connection = sqcon;
 
-            SqlConnection SqlConn = new SqlConnection("Initial Catalog=IMS;Integrated Security=True;Server=.");
+            SqlDataAdapter sqdatadap = new SqlDataAdapter(sqccmd);
 
-            try
-            {
-                SqlConn.Open();
-            }
+            DataTable dtresult = new DataTable();
 
-            catch (Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-                Environment.Exit(0);
-            }
+            sqdatadap.Fill(dtresult);
 
-            SqlCommand SqlCmd = new SqlCommand();
-
-            SqlCmd.CommandText = STRSQL;
-            SqlCmd.Connection = SqlConn;
-            SqlCmd.CommandTimeout = 600;
-
-            SqlDtAdptr = new SqlDataAdapter(SqlCmd);
-            DtTbl = new DataTable();
-            SqlDtAdptr.Fill(DtTbl);
-
-            return DtTbl;
+            sqcon.Close();
+            return dtresult;
         }
+
     }
 }

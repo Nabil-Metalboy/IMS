@@ -31,15 +31,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.FNtextBox = new System.Windows.Forms.TextBox();
+            this.LNtextBox = new System.Windows.Forms.TextBox();
+            this.UNtextBox = new System.Windows.Forms.TextBox();
+            this.PasstextBox = new System.Windows.Forms.TextBox();
+            this.MobNotextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.EmailtextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,15 +51,15 @@
             // 
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.FNtextBox);
+            this.panel1.Controls.Add(this.LNtextBox);
+            this.panel1.Controls.Add(this.UNtextBox);
+            this.panel1.Controls.Add(this.PasstextBox);
+            this.panel1.Controls.Add(this.MobNotextBox);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.EmailtextBox);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -74,10 +74,10 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button2.Location = new System.Drawing.Point(289, 306);
+            this.button2.Location = new System.Drawing.Point(176, 306);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 23);
-            this.button2.TabIndex = 14;
+            this.button2.TabIndex = 8;
             this.button2.Text = "Register";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -89,45 +89,51 @@
             this.button1.Location = new System.Drawing.Point(289, 306);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 23);
-            this.button1.TabIndex = 13;
+            this.button1.TabIndex = 7;
             this.button1.Text = "Verify";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox6
+            // FNtextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(166, 41);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(216, 20);
-            this.textBox6.TabIndex = 12;
+            this.FNtextBox.AcceptsTab = true;
+            this.FNtextBox.Location = new System.Drawing.Point(166, 41);
+            this.FNtextBox.Name = "FNtextBox";
+            this.FNtextBox.Size = new System.Drawing.Size(216, 20);
+            this.FNtextBox.TabIndex = 1;
             // 
-            // textBox5
+            // LNtextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(166, 80);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(216, 20);
-            this.textBox5.TabIndex = 11;
+            this.LNtextBox.AcceptsTab = true;
+            this.LNtextBox.Location = new System.Drawing.Point(166, 80);
+            this.LNtextBox.Name = "LNtextBox";
+            this.LNtextBox.Size = new System.Drawing.Size(216, 20);
+            this.LNtextBox.TabIndex = 2;
             // 
-            // textBox4
+            // UNtextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(166, 117);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(216, 20);
-            this.textBox4.TabIndex = 10;
+            this.UNtextBox.AcceptsTab = true;
+            this.UNtextBox.Location = new System.Drawing.Point(166, 117);
+            this.UNtextBox.Name = "UNtextBox";
+            this.UNtextBox.Size = new System.Drawing.Size(216, 20);
+            this.UNtextBox.TabIndex = 3;
             // 
-            // textBox3
+            // PasstextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(166, 256);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(216, 20);
-            this.textBox3.TabIndex = 9;
+            this.PasstextBox.AcceptsTab = true;
+            this.PasstextBox.Location = new System.Drawing.Point(166, 256);
+            this.PasstextBox.Name = "PasstextBox";
+            this.PasstextBox.PasswordChar = '*';
+            this.PasstextBox.Size = new System.Drawing.Size(216, 20);
+            this.PasstextBox.TabIndex = 6;
             // 
-            // textBox2
+            // MobNotextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(166, 158);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 20);
-            this.textBox2.TabIndex = 8;
+            this.MobNotextBox.AcceptsTab = true;
+            this.MobNotextBox.Location = new System.Drawing.Point(166, 158);
+            this.MobNotextBox.Name = "MobNotextBox";
+            this.MobNotextBox.Size = new System.Drawing.Size(216, 20);
+            this.MobNotextBox.TabIndex = 4;
             // 
             // label7
             // 
@@ -159,12 +165,13 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Email Address: ";
             // 
-            // textBox1
+            // EmailtextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(166, 207);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 20);
-            this.textBox1.TabIndex = 4;
+            this.EmailtextBox.AcceptsTab = true;
+            this.EmailtextBox.Location = new System.Drawing.Point(166, 207);
+            this.EmailtextBox.Name = "EmailtextBox";
+            this.EmailtextBox.Size = new System.Drawing.Size(216, 20);
+            this.EmailtextBox.TabIndex = 5;
             // 
             // label4
             // 
@@ -225,15 +232,19 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox EmailtextBox;
+        private System.Windows.Forms.TextBox MobNotextBox;
+        private System.Windows.Forms.TextBox PasstextBox;
+        private System.Windows.Forms.TextBox UNtextBox;
+        private System.Windows.Forms.TextBox LNtextBox;
+        private System.Windows.Forms.TextBox FNtextBox;
+        
+        
+ 
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

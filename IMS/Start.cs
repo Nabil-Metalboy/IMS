@@ -14,6 +14,10 @@ namespace IMS
         public Start()
         {
             InitializeComponent();
+            label1.Hide();
+            label2.Hide();
+            label3.Hide();
+            label4.Hide();
         }
 
         
@@ -31,5 +35,7 @@ namespace IMS
             this.Hide();
 
         }
+
+        
     }
 }
