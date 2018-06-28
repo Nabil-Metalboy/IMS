@@ -27,7 +27,39 @@ namespace IMS
         private void button1_Click(object sender, EventArgs e)
         {
             DataTable check = new DataTable();
-            check = insertQr.queryexecution("select * from USERINFO");
+            check = insertQr.queryexecution("select * from USERINFO where UserName='"+UNtextBox.Text+"'");
+
+            //for(int i=0; i< check.Rows.Count;i++)
+            //{
+            //    DataRow myRow = check.Rows[i];
+            //    if (FNtextBox.Text == myRow["FirstName"].ToString()
+            //        ||
+            //        LNtextBox.Text == myRow["LastName"].ToString()
+            //         ||
+            //        UNtextBox.Text == myRow["UserName"].ToString()
+            //         ||
+            //        MobNotextBox.Text == myRow["MobileNo"].ToString()
+            //         ||
+            //        EmailtextBox.Text == myRow["Email"].ToString()
+            //        )
+            //         {
+            //            MessageBox.Show("User Already Exists");
+            //            Start st = new Start(true);
+            //            st.Show();
+            //            this.Hide();
+            //         }
+
+            //    else
+            //        {
+                      
+
+            //            button2.Visible = true;
+            //            this.button1.Hide();
+            //        MessageBox.Show("Data Verified");
+            //    }
+            //}
+
+
             foreach (DataRow user in check.Rows)
             {
                 if (FNtextBox.Text == user["FirstName"].ToString()
@@ -48,27 +80,29 @@ namespace IMS
                 }
 
 
-                else 
-                //if (FNtextBox.Text != user["FirstName"].ToString()
-                //    ||
-                //    LNtextBox.Text != user["LastName"].ToString()
-                //     ||
-                //    UNtextBox.Text != user["UserName"].ToString()
-                //     ||
-                //    MobNotextBox.Text != user["MobileNo"].ToString()
-                //     ||
-                //    EmailtextBox.Text != user["Email"].ToString())
+                else
+                if (FNtextBox.Text != user["FirstName"].ToString()
+                    ||
+                    LNtextBox.Text != user["LastName"].ToString()
+                     ||
+                    UNtextBox.Text != user["UserName"].ToString()
+                     ||
+                    MobNotextBox.Text != user["MobileNo"].ToString()
+                     ||
+                    EmailtextBox.Text != user["Email"].ToString())
                 {
-                    
+
                     button2.Visible = true;
                     this.button1.Hide();
-                    
+
                 }
-                
+
             }
-            MessageBox.Show("Data Verified");
-            //button2.Visible = true;
-            //this.button1.Hide();
+            //MessageBox.Show("Data Verified");
+
+
+
+
 
         }
 
